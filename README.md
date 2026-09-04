@@ -10,7 +10,7 @@ Download the latest Windows installer from the [Releases](https://github.com/Joh
 
 - **Current Release**: IdeaHub v1.0.0
 - **Platform**: Windows (x64)
-- **Installer**: `IdeaHub Setup 1.0.0.exe`
+- **Installer**: `IdeaHub.Setup.1.0.0.exe`
 - **Unsigned Release Notice**: The installer is currently unsigned, so Windows Defender SmartScreen may display an "Unknown Publisher" warning on first launch. See [Installation](#installation) for details.
 
 ---
@@ -90,7 +90,7 @@ These boundaries represent intentional architectural choices for privacy, reliab
 ## Installation
 
 1. Navigate to the latest release on the [Releases](https://github.com/Johnkoder/idea-hub-official/releases) page.
-2. Download `IdeaHub Setup 1.0.0.exe`.
+2. Download `IdeaHub.Setup.1.0.0.exe`.
 3. Run the installer.
 4. If Windows Defender SmartScreen displays a warning ("Windows protected your PC / Unknown Publisher"):
    - Click **More info**.
@@ -104,7 +104,7 @@ These boundaries represent intentional architectural choices for privacy, reliab
 
 We recommend verifying the integrity of your download prior to running the setup executable.
 
-- **Installer Filename**: `IdeaHub Setup 1.0.0.exe`
+- **Installer Filename**: `IdeaHub.Setup.1.0.0.exe`
 - **Expected SHA-256**:
   ```text
   880991930f2c383029b08e703803cb331a50a87a5464f02405d3717bdfa2b06b
@@ -112,7 +112,7 @@ We recommend verifying the integrity of your download prior to running the setup
 
 ### Verify with PowerShell
 ```powershell
-Get-FileHash ".\IdeaHub Setup 1.0.0.exe" -Algorithm SHA256
+Get-FileHash ".\IdeaHub.Setup.1.0.0.exe" -Algorithm SHA256
 ```
 
 Compare the computed hash with `SHA256SUMS.txt` attached to the release or view [docs/checksums.md](docs/checksums.md).

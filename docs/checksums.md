@@ -1,7 +1,7 @@
 # IdeaHub v1.0.0 Checksums
 
 ## Installer
-- **File**: `IdeaHub Setup 1.0.0.exe`
+- **File**: `IdeaHub.Setup.1.0.0.exe`
 - **SHA-256**: `880991930f2c383029b08e703803cb331a50a87a5464f02405d3717bdfa2b06b`
 
 ## Unpacked Executable
