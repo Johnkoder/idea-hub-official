@@ -54,7 +54,7 @@ Download the latest Windows installer from the [Releases](https://github.com/Joh
 - Interactive Tag Browser with item filtering and direct navigation.
 
 ### Search
-- Fast global search indexing item titles, note text, Canvas labels, and tags.
+- Fast global search across project and item titles, Note content, and tags.
 - Direct keyboard shortcut access (`Ctrl+K`) with contextual preview and jump-to-location.
 
 ### Local-First Architecture
