@@ -6,15 +6,15 @@ IdeaHub stores workspace content locally on the user's device.
 
 ## Accounts
 
-IdeaHub v1.0.0 does not require a user account.
+IdeaHub v1.2.0 does not require a user account.
 
 ## Cloud Synchronization
 
-IdeaHub v1.0.0 does not include cloud synchronization.
+IdeaHub v1.2.0 does not include cloud synchronization.
 
 ## Telemetry and Analytics
 
-IdeaHub v1.0.0 does not intentionally include analytics or telemetry services.
+IdeaHub v1.2.0 does not intentionally include analytics or telemetry services.
 
 ## Network Access
 

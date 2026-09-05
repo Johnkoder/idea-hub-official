@@ -1,6 +1,6 @@
 # IdeaHub
 
-A local-first Windows desktop workspace for brainstorming, notes, canvases, tasks, and lightweight personal organization.
+A local-first Windows desktop workspace for brainstorming, notes, canvases, tasks, and personal organization.
 
 ---
 
@@ -8,10 +8,25 @@ A local-first Windows desktop workspace for brainstorming, notes, canvases, task
 
 Download the latest Windows installer from the [Releases](https://github.com/Johnkoder/idea-hub-official/releases) page.
 
-- **Current Release**: IdeaHub v1.0.0
+- **Current Release**: IdeaHub v1.2.0
 - **Platform**: Windows (x64)
-- **Installer**: `IdeaHub.Setup.1.0.0.exe`
-- **Unsigned Release Notice**: The installer is currently unsigned, so Windows Defender SmartScreen may display an "Unknown Publisher" warning on first launch. See [Installation](#installation) for details.
+- **Installer**: `IdeaHub Setup 1.2.0.exe`
+- **Unsigned Release Notice**: Because IdeaHub is currently unsigned, Windows Defender SmartScreen may display an "Unknown Publisher" warning. If you trust the release source, use the Windows "More info" option to continue. See [Installation](#installation) for details.
+
+---
+
+## What's New in v1.2
+
+- **Major desktop UI/UX redesign**: A cleaner, more structured desktop-native visual system with a dedicated navigation rail and refined typography.
+- **Redesigned project launcher**: Faster project browsing, quick actions, and accessible recent items.
+- **Redesigned workspace & tabs**: Refreshed Explorer, folder tree, and multi-tab interface.
+- **Notes editing polish**: Distraction-free editing with refined formatting and slash-menu interactions.
+- **Redesigned Canvas toolbar & inspector**: Centralized spatial canvas tools for shapes, sticky notes, connectors, and note references.
+- **Refreshed core views**: Inbox, Global Tasks, Calendar, Tags, Search, and Settings now share the modern desktop design language.
+- **Contextual guided tour**: First-run coach marks introduce key controls directly in the interface and can be replayed from Settings.
+- **Theme improvements**: Refined light, dark, and system appearance.
+- **Desktop responsiveness**: Smooth layout scaling including support for compact 960x600 windows.
+- **Reliability improvements**: Development and runtime interop fixes with robust local persistence.
 
 ---
 
@@ -35,12 +50,12 @@ Download the latest Windows installer from the [Releases](https://github.com/Joh
 - Local image placement and stable Note References connecting visual nodes to workspace documents.
 
 ### Tasks
-- Project-scoped Task Lists for focused project milestones.
-- Independent Global Tasks view consolidating items across workspaces.
+- **Project Task Lists** for tasks scoped to a specific project.
+- **Global Tasks** as a separate personal checklist for tasks not tied to one project.
 - Straightforward checklist workflow with progress indicators.
 
 ### Calendar
-- Centralized global calendar view.
+- Centralized global calendar view for dated events.
 - Schedule and inspect dated events alongside ongoing work.
 - Operates independently from project task checklists.
 
@@ -55,7 +70,11 @@ Download the latest Windows installer from the [Releases](https://github.com/Joh
 
 ### Search
 - Fast global search across project and item titles, Note content, and tags.
-- Direct keyboard shortcut access (`Ctrl+K`) with contextual preview and jump-to-location.
+- Direct keyboard access with `Ctrl+K`.
+
+### Guided Tour
+- Contextual first-run guided tour highlighting key controls directly in the interface with coach marks.
+- Can be replayed at any time from Settings.
 
 ### Local-First Architecture
 - 100% offline and fully functional without an internet connection.
@@ -65,9 +84,15 @@ Download the latest Windows installer from the [Releases](https://github.com/Joh
 
 ---
 
+## Updating from v1.0.0
+
+IdeaHub v1.2.0 can be installed over an existing v1.0.0 installation. Existing local IdeaHub data is preserved during the upgrade. As with any local application, keeping a current backup before upgrading is recommended.
+
+---
+
 ## Current Scope
 
-IdeaHub v1.0.0 is deliberately focused on delivering a stable local experience:
+IdeaHub v1.2.0 is deliberately focused on delivering a stable local experience:
 - **Platform**: Windows x64 only
 - **Single-user**: Local desktop application
 - **Fully offline**: No cloud synchronization or remote accounts
@@ -90,9 +115,9 @@ These boundaries represent intentional architectural choices for privacy, reliab
 ## Installation
 
 1. Navigate to the latest release on the [Releases](https://github.com/Johnkoder/idea-hub-official/releases) page.
-2. Download `IdeaHub.Setup.1.0.0.exe`.
+2. Download `IdeaHub Setup 1.2.0.exe`.
 3. Run the installer.
-4. If Windows Defender SmartScreen displays a warning ("Windows protected your PC / Unknown Publisher"):
+4. If Windows Defender SmartScreen displays an "Unknown Publisher" warning:
    - Click **More info**.
    - Click **Run anyway** if you trust the release source.
 5. Follow the setup wizard prompts to select an installation location and finish setup.
@@ -104,15 +129,15 @@ These boundaries represent intentional architectural choices for privacy, reliab
 
 We recommend verifying the integrity of your download prior to running the setup executable.
 
-- **Installer Filename**: `IdeaHub.Setup.1.0.0.exe`
+- **Installer Filename**: `IdeaHub Setup 1.2.0.exe`
 - **Expected SHA-256**:
   ```text
-  880991930f2c383029b08e703803cb331a50a87a5464f02405d3717bdfa2b06b
+  700d8b1afe56ff29200202ca6cf2a19abc232781b5899ca14a9f1445de07209e
   ```
 
 ### Verify with PowerShell
 ```powershell
-Get-FileHash ".\IdeaHub.Setup.1.0.0.exe" -Algorithm SHA256
+Get-FileHash ".\IdeaHub Setup 1.2.0.exe" -Algorithm SHA256
 ```
 
 Compare the computed hash with `SHA256SUMS.txt` attached to the release or view [docs/checksums.md](docs/checksums.md).
