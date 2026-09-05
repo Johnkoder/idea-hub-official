@@ -3,7 +3,7 @@
 ## IdeaHub v1.2.0
 
 ### Installer
-- **File**: `IdeaHub Setup 1.2.0.exe`
+- **File**: `IdeaHub.Setup.1.2.0.exe`
 - **Size**: `88,711,904 bytes`
 - **SHA-256**: `700d8b1afe56ff29200202ca6cf2a19abc232781b5899ca14a9f1445de07209e`
 
