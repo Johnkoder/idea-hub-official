@@ -8,25 +8,26 @@ A local-first Windows desktop workspace for brainstorming, notes, canvases, task
 
 Download the latest Windows installer from the [Releases](https://github.com/Johnkoder/idea-hub-official/releases) page.
 
-- **Current Release**: IdeaHub v1.2.1
+- **Current Release**: IdeaHub v1.3.0
 - **Platform**: Windows (x64)
-- **Installer**: `IdeaHub.Setup.1.2.1.exe`
-- **Size**: 88,713,037 bytes
-- **SHA-256**: `79f464fa2c594c9869c13d92f15bf90f45b477018675cf22f4154cb3139ecfe0`
+- **Installer**: `IdeaHub.Setup.1.3.0.exe`
+- **Size**: 88,714,941 bytes
+- **SHA-256**: `0a23280e824437637ca4c366b2b8790b8a1cce5bc5c2641d89ea79c964ee7138`
 - **Unsigned Release Notice**: Because IdeaHub is currently unsigned, Windows Defender SmartScreen may display an "Unknown Publisher" warning. If you trust the release source, use the Windows "More info" option to continue. See [Installation](#installation) for details.
 
 ---
 
-## v1.2.1 Hotfix
+## What's New in v1.3.0
 
-v1.2.1 hardens IdeaHub's internal packaged-test infrastructure so development and release-verification smoke tests always use isolated temporary profiles instead of the normal production user-data directory.
+### Paste images directly into Canvas
 
-- Centralized isolation for internal smoke/verify modes
-- Fail-closed protection for unrecognized internal test flags
-- Production test hooks remain disabled during normal launches
-- Additional regression coverage verifies packaged smoke tests cannot mutate a normal production profile
+You can now paste screenshots and copied images directly onto an IdeaHub Canvas with `Ctrl+V`.
 
-No user-facing workflow or data format changes are introduced by this patch.
+- Paste screenshots from Windows Snipping Tool
+- Paste supported clipboard images directly onto the current Canvas
+- Pasted images are stored locally using IdeaHub's managed asset system
+- Undo/Redo and normal Canvas persistence work as expected
+- Text editing fields continue to use normal paste behavior
 
 ---
 
@@ -99,17 +100,17 @@ No user-facing workflow or data format changes are introduced by this patch.
 
 ---
 
-## Updating to v1.2.1
+## Updating to v1.3.0
 
-v1.2.1 can be installed over an existing IdeaHub installation. Existing local IdeaHub data is preserved during the upgrade.
+v1.3.0 can be installed over an existing IdeaHub installation. Existing local IdeaHub data is preserved during the upgrade.
 
-Keeping a current backup before any application upgrade is recommended.
+Keeping a current backup before application upgrades is recommended.
 
 ---
 
 ## Current Scope
 
-IdeaHub v1.2.1 is deliberately focused on delivering a stable local experience:
+IdeaHub v1.3.0 is deliberately focused on delivering a stable local experience:
 - **Platform**: Windows x64 only
 - **Single-user**: Local desktop application
 - **Fully offline**: No cloud synchronization or remote accounts
@@ -132,7 +133,7 @@ These boundaries represent intentional architectural choices for privacy, reliab
 ## Installation
 
 1. Navigate to the latest release on the [Releases](https://github.com/Johnkoder/idea-hub-official/releases) page.
-2. Download `IdeaHub.Setup.1.2.1.exe`.
+2. Download `IdeaHub.Setup.1.3.0.exe`.
 3. Run the installer.
 4. If Windows Defender SmartScreen displays an "Unknown Publisher" warning:
    - Click **More info**.
@@ -146,15 +147,15 @@ These boundaries represent intentional architectural choices for privacy, reliab
 
 We recommend verifying the integrity of your download prior to running the setup executable.
 
-- **Installer Filename**: `IdeaHub.Setup.1.2.1.exe`
+- **Installer Filename**: `IdeaHub.Setup.1.3.0.exe`
 - **Expected SHA-256**:
   ```text
-  79f464fa2c594c9869c13d92f15bf90f45b477018675cf22f4154cb3139ecfe0
+  0a23280e824437637ca4c366b2b8790b8a1cce5bc5c2641d89ea79c964ee7138
   ```
 
 ### Verify with PowerShell
 ```powershell
-Get-FileHash ".\IdeaHub.Setup.1.2.1.exe" -Algorithm SHA256
+Get-FileHash ".\IdeaHub.Setup.1.3.0.exe" -Algorithm SHA256
 ```
 
 Compare the computed hash with `SHA256SUMS.txt` attached to the release or view [docs/checksums.md](docs/checksums.md).

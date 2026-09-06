@@ -1,5 +1,26 @@
 # Release Checksums
 
+## IdeaHub v1.3.0
+
+### Installer
+- **File**: `IdeaHub.Setup.1.3.0.exe`
+- **Size**: `88,714,941 bytes`
+- **SHA-256**: `0a23280e824437637ca4c366b2b8790b8a1cce5bc5c2641d89ea79c964ee7138`
+
+### Unpacked Executable
+- **File**: `IdeaHub.exe`
+- **Size**: `186,328,576 bytes`
+- **SHA-256**: `06b22794993a6f82d1bced069e3d2a1c479a170b8f5740ff392521d09811c644`
+
+### Build Provenance
+- **Binary Source Commit**: `411f06b8a9d591bbe33942ca77c5b9ad22bb4253`
+- **Release Version**: `1.3.0`
+- **Target Platform**: Windows (x64)
+
+> Note: Subsequent private documentation commits in development do not modify the binary source or checksums.
+
+---
+
 ## IdeaHub v1.2.1
 
 ### Installer
