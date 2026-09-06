@@ -8,12 +8,27 @@ A local-first Windows desktop workspace for brainstorming, notes, canvases, task
 
 Download the latest Windows installer from the [Releases](https://github.com/Johnkoder/idea-hub-official/releases) page.
 
-- **Current Release**: IdeaHub v1.3.0
+- **Current Release**: IdeaHub v1.4.0
 - **Platform**: Windows (x64)
-- **Installer**: `IdeaHub.Setup.1.3.0.exe`
-- **Size**: 88,714,941 bytes
-- **SHA-256**: `0a23280e824437637ca4c366b2b8790b8a1cce5bc5c2641d89ea79c964ee7138`
+- **Installer**: `IdeaHub.Setup.1.4.0.exe`
+- **Size**: 88,718,344 bytes
+- **SHA-256**: `19afe7365341b95a2567a8c2f66238d820f142cd9277494dcf956576e912fd8f`
 - **Unsigned Release Notice**: Because IdeaHub is currently unsigned, Windows Defender SmartScreen may display an "Unknown Publisher" warning. If you trust the release source, use the Windows "More info" option to continue. See [Installation](#installation) for details.
+
+---
+
+## What's New in v1.4.0
+
+### Check for updates from Settings
+
+IdeaHub can now check its official GitHub Releases page for newer stable versions when you explicitly ask it to.
+
+- Open Settings and choose Check for updates
+- No update check runs automatically at startup
+- No background polling
+- Download update opens the official IdeaHub GitHub release page
+- Installation remains manual
+- Core workspace features continue to work offline
 
 ---
 
@@ -21,7 +36,7 @@ Download the latest Windows installer from the [Releases](https://github.com/Joh
 
 ### Paste images directly into Canvas
 
-You can now paste screenshots and copied images directly onto an IdeaHub Canvas with `Ctrl+V`.
+You can paste screenshots and copied images directly onto an IdeaHub Canvas with `Ctrl+V`.
 
 - Paste screenshots from Windows Snipping Tool
 - Paste supported clipboard images directly onto the current Canvas
@@ -63,7 +78,7 @@ You can now paste screenshots and copied images directly onto an IdeaHub Canvas 
 - Infinite spatial canvas for freeform brainstorming and diagramming.
 - Complete visual toolkit: pen, shapes (rectangles, ellipses), connectors/arrows, text labels, and sticky notes.
 - Pan, zoom, marquee selection, duplicate, and undo/redo history.
-- Local image placement and stable Note References connecting visual nodes to workspace documents.
+- Local image placement, clipboard image paste (`Ctrl+V`), and stable Note References connecting visual nodes to workspace documents.
 
 ### Tasks
 - **Project Task Lists** for tasks scoped to a specific project.
@@ -93,16 +108,19 @@ You can now paste screenshots and copied images directly onto an IdeaHub Canvas 
 - Can be replayed at any time from Settings.
 
 ### Local-First Architecture
-- 100% offline and fully functional without an internet connection.
+- Local-first and offline by default. Core workspace features work without an internet connection.
+- IdeaHub contacts official GitHub Releases only when explicitly requested via Check for updates in Settings.
 - No mandatory accounts, sign-ins, or remote services.
 - Structured local SQLite database with managed on-disk assets.
 - Complete import and export of structured `.ideahub` project packages.
 
 ---
 
-## Updating to v1.3.0
+## Updating to v1.4.0
 
-v1.3.0 can be installed over an existing IdeaHub installation. Existing local IdeaHub data is preserved during the upgrade.
+v1.4.0 can be installed over an existing IdeaHub installation. Existing local IdeaHub data is preserved during the upgrade.
+
+Existing v1.3.0 installations do not contain the in-app update checker and should be upgraded manually by downloading and running the v1.4.0 installer. After upgrading to v1.4.0, future releases can be discovered through **Settings → Check for updates**.
 
 Keeping a current backup before application upgrades is recommended.
 
@@ -110,12 +128,12 @@ Keeping a current backup before application upgrades is recommended.
 
 ## Current Scope
 
-IdeaHub v1.3.0 is deliberately focused on delivering a stable local experience:
+IdeaHub v1.4.0 is deliberately focused on delivering a stable local experience:
 - **Platform**: Windows x64 only
 - **Single-user**: Local desktop application
-- **Fully offline**: No cloud synchronization or remote accounts
+- **Offline by default**: Core workspace features work offline without cloud synchronization or remote accounts. Connects to GitHub Releases only when you explicitly check for updates in Settings.
 - **No AI / Cloud APIs**: All text and canvas processing occurs locally on your computer
-- **No auto-updater**: Updates are delivered manually via new releases
+- **Manual updater**: Update checks occur only on user request; installer downloads and installation remain manual.
 
 These boundaries represent intentional architectural choices for privacy, reliability, and speed.
 
@@ -133,7 +151,7 @@ These boundaries represent intentional architectural choices for privacy, reliab
 ## Installation
 
 1. Navigate to the latest release on the [Releases](https://github.com/Johnkoder/idea-hub-official/releases) page.
-2. Download `IdeaHub.Setup.1.3.0.exe`.
+2. Download `IdeaHub.Setup.1.4.0.exe`.
 3. Run the installer.
 4. If Windows Defender SmartScreen displays an "Unknown Publisher" warning:
    - Click **More info**.
@@ -147,15 +165,15 @@ These boundaries represent intentional architectural choices for privacy, reliab
 
 We recommend verifying the integrity of your download prior to running the setup executable.
 
-- **Installer Filename**: `IdeaHub.Setup.1.3.0.exe`
+- **Installer Filename**: `IdeaHub.Setup.1.4.0.exe`
 - **Expected SHA-256**:
   ```text
-  0a23280e824437637ca4c366b2b8790b8a1cce5bc5c2641d89ea79c964ee7138
+  19afe7365341b95a2567a8c2f66238d820f142cd9277494dcf956576e912fd8f
   ```
 
 ### Verify with PowerShell
 ```powershell
-Get-FileHash ".\IdeaHub.Setup.1.3.0.exe" -Algorithm SHA256
+Get-FileHash ".\IdeaHub.Setup.1.4.0.exe" -Algorithm SHA256
 ```
 
 Compare the computed hash with `SHA256SUMS.txt` attached to the release or view [docs/checksums.md](docs/checksums.md).
@@ -167,7 +185,8 @@ Compare the computed hash with `SHA256SUMS.txt` attached to the release or view 
 IdeaHub is designed around user privacy:
 - Workspace data never leaves your device.
 - No telemetry, analytics, or background reporting services are included.
-- No network connections are initiated during normal operation.
+- Core workspace operation does not require an internet connection.
+- IdeaHub connects to official GitHub Releases only when you explicitly click **Check for updates** in Settings.
 
 Read our full statement in [docs/privacy.md](docs/privacy.md).
 
